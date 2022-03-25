@@ -33,9 +33,9 @@ export default async function handler(
       });
 
     } catch(err){ 
-     return res.status(500).json({message: err.message})
+     return res.status(500).json({message: `could not create comment`, err})
   }
   
 
-  res.status(200).json({ name: 'John Doe' })
+return res.status(200).json({ message:"Comment Submitted !" });
 }
